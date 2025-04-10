@@ -5,7 +5,8 @@
   "main": "index.js",
   "files": [
     "themes/**/*",
-    "assets/**/*"
+    "assets/**/*",
+    "templates/**/*"
   ],
   "scripts": {
     "dev": "marp -w --html -s . --debug=true",
