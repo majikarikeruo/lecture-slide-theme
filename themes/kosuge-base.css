@@ -1,0 +1,385 @@
+/* @theme kosuge */
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --white-color: #fff;
+  --primary-color: #2d4084;
+  --secondary-color: #ff8c42;
+  font-size: 20px;
+  line-height: 1.75;
+  box-sizing: border-box;
+}
+
+section {
+  box-sizing: border-box;
+  padding: 40px;
+  border: solid 20px var(--primary-color);
+  color: #222;
+  background-color: var(--white-color);
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 img {
+  vertical-align: -40px;
+}
+
+h2 {
+  position: relative;
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 2rem;
+  text-align: center;
+  align-content: center;
+}
+
+h2::after {
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translate(-50%, 0);
+  content: "";
+  width: 80px;
+  height: 6px;
+  background-color: var(--primary-color);
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* 基本リストスタイル - シンプルで読みやすく */
+ul {
+  margin-top: 0;
+  padding: 0;
+  /* padding-left: 2em;
+    text-indent: -1.75em; */
+  list-style: none;
+}
+
+ul li {
+  /* margin-top: 0.5em;
+    margin-bottom: 0.5em; */
+  line-height: 1.75;
+}
+
+ol li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.75;
+}
+
+ul li img {
+  margin-right: 10px;
+}
+
+strong {
+  color: var(--secondary-color);
+  font-style: normal;
+}
+em {
+  font-style: normal;
+}
+
+/*******************************************************
+  * Utility
+*******************************************************/
+.text-center {
+  text-align: center;
+}
+
+.text-xl {
+  font-size: 2rem;
+}
+
+.text-catchcopy {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-sm {
+  font-size: 0.875em;
+}
+
+.w-100 {
+  display: inline-block;
+  width: 64px;
+}
+.figure {
+  margin: 0;
+}
+/*******************************************************
+  * section
+  *******************************************************/
+
+/* ここはこんな感じでsectionタグを付与しないとダメっぽい */
+section.heading-layout {
+  display: grid;
+  place-items: center;
+}
+
+section.heading-layout h1::after {
+  content: none;
+}
+
+/*
+  * 通常のセクション
+  **/
+section.content-layout {
+  display: grid;
+  grid-template-rows: 75px 1fr;
+  height: 100%;
+  gap: 48px;
+}
+
+/**
+  * 左にふわふわ・右にコンテンツを入れたい場合
+  */
+section.eyecatch-content-layout {
+  display: grid;
+  gap: 48px 16px;
+  grid-template-rows: 75px 1fr;
+  grid-template-columns: 28% 1fr;
+}
+section.eyecatch-content-layout h2 {
+  grid-column: 1 / -1; /* 見出しは全幅 */
+}
+
+/**********************************
+* 左右半分のセクション
+***********************************/
+
+section.split-layout {
+  display: grid;
+  gap: 48px 16px;
+  grid-template-rows: 75px 1fr;
+  grid-template-columns: 50% 50%;
+}
+section.split-layout h2 {
+  grid-column: 1 / -1; /* 見出しは全幅 */
+}
+
+/**
+  * キャッチコピーのみのレイアウト
+  **/
+section.catchcopy-layout {
+  display: grid;
+  gap: 48px 16px;
+  grid-template-rows: 75px 1fr;
+  grid-template-columns: 50% 50%;
+}
+section.catchcopy-layout h2 {
+  grid-column: 1 / -1;
+}
+
+section.catchcopy-layout p {
+  grid-column: 1 / -1;
+  align-content: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/**
+  * キャッチ画像のみのレイアウト
+  **/
+section.eyecatch-layout {
+  display: grid;
+  gap: 48px 16px;
+  grid-template-rows: 75px 1fr;
+  grid-template-columns: 50% 50%;
+}
+section.eyecatch-layout > * {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/**
+  * 3分割レイアウト
+  */
+section.three-column-layout {
+  display: grid;
+  gap: 48px 16px;
+  grid-template-rows: 75px 1fr;
+  gap: 16px;
+  justify-content: center;
+  align-items: baseline;
+}
+
+/**
+  * キャッチ画像のみのレイアウト
+  **/
+section.centering-layout {
+  display: grid;
+  justify-content: center;
+  gap: 48px 16px;
+  grid-template-rows: 75px 1fr;
+  grid-template-columns: 50% 50%;
+}
+section.centering-layout > * {
+  grid-column: 1 / -1;
+  display: grid;
+  justify-content: center;
+}
+
+/*******************************************************
+* container
+*******************************************************/
+.card-box {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-box > p {
+  text-align: center;
+}
+
+.eyecatch-box {
+  padding-top: 2rem;
+  text-align: center;
+  /* align-content: center; */
+}
+
+.center-box {
+  text-align: center;
+  align-content: center;
+}
+
+/* 注意書き
+**/
+.notice-box {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  background-color: #eee;
+  text-align-last: left;
+}
+
+.notice-box p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+.notice-box img {
+  margin-right: 12px;
+}
+
+/**********************************
+   * Components
+   ***********************************/
+
+/**
+   * 目次
+   * {.toc}
+   **/
+.toc {
+  margin-top: 32px;
+  padding-left: 48px;
+}
+.toc li {
+  margin: 16px 0;
+}
+
+/**
+* Code部分  
+*/
+.code-box {
+  position: relative;
+}
+
+pre {
+  margin: 0;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 1.4;
+
+  background-color: #fafafa;
+}
+
+pre code {
+  margin: 0;
+}
+
+.code-label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px;
+  color: #fff;
+  line-height: 1;
+  background-color: var(--secondary-color);
+  font-size: 0.875em;
+}
+
+.code-box.large pre {
+  font-size: 1.25rem;
+}
+
+/**
+   * 手順を示す部分
+  liの後に添える
+  
+  {.order-list}
+   */
+.order-list {
+  position: relative;
+  margin-top: 56px;
+  padding: 24px 24px 8px;
+  border: solid 1px var(--primary-color);
+  border-radius: 8px;
+  list-style-position: inside;
+}
+
+.order-list::before {
+  content: "手順";
+  position: absolute;
+  top: -1em;
+  left: 1em;
+  width: 64px;
+  padding: 4px 8px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.875em;
+}
+.order-list li {
+  margin: 0.75em 0;
+  font-size: 0.875em;
+  line-height: 1.6;
+}

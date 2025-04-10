@@ -1,0 +1,7 @@
+lang: ja
+theme: kosuge
+themeSet: "themes/kosuge-base.css"
+size: 16:9
+engine: engine.mjs
+html: true
+allowLocalFiles: true

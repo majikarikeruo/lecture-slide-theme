@@ -1,0 +1,10 @@
+{
+  "files": "*.md",
+  "options": {
+    "parser": "markdown",
+    "proseWrap": "preserve",
+    "tabWidth": 2,
+    "markdown.fences": true,
+    "markdown.listItemIndent": "one"
+  }
+}
