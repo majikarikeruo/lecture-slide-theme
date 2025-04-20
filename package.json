@@ -26,7 +26,6 @@
     "markdown-it-ins": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
     "markdown-it-prism": "^3.0.0",
-    "markdown-it-textual-uml": "^0.17.1",
-    "lecture-slide-theme": "^1.1.0"
+    "markdown-it-textual-uml": "^0.17.1"
   }
 }
