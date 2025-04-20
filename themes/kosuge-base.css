@@ -19,12 +19,23 @@ section {
   color: #222;
   background-color: var(--white-color);
 }
-
 h1 {
+  position: relative;
   color: var(--primary-color);
   font-size: 2.25rem;
   font-weight: bold;
   text-align: center;
+}
+
+h1::before {
+  display: inline-flex;
+  align-items: center;
+  content: "";
+  width: 12rem;
+  height: 12rem;
+  vertical-align: 40px;
+  background-image: url(../../assets/images/common/fuwafuwa.png);
+  background-size: contain;
 }
 
 h1 img {
@@ -177,9 +188,9 @@ section.eyecatch-content-layout h2 {
 
 section.split-layout {
   display: grid;
-  gap: 48px 16px;
+  gap: 48px;
   grid-template-rows: 75px 1fr;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
 }
 section.split-layout h2 {
   grid-column: 1 / -1; /* 見出しは全幅 */
@@ -327,8 +338,8 @@ pre {
   border-radius: 8px;
   font-size: 20px;
   line-height: 1.4;
-
   background-color: #fafafa;
+  white-space: pre-wrap;
 }
 
 pre code {
