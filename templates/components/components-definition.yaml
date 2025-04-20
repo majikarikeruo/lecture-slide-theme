@@ -1,0 +1,110 @@
+# templates/components/components-definition.yaml
+コンポーネント:
+  notice-box:
+    説明: "注意書きや補足情報を表示するボックス"
+    使用シーン:
+      - "重要な注意事項"
+      - "補足情報"
+      - "ヒントや追加情報"
+    構文: |
+      注意書きの内容 {.notice-box}
+
+  code-box:
+    説明: "コードサンプルを表示するボックス"
+    使用シーン:
+      - "プログラミング例"
+      - "構文説明"
+      - "コマンドライン操作の例示"
+    構文: |
+      :::code-box
+      HTML {.code-label}
+
+      ```html
+      <div id="room" style="width: 100vw; height: 100vh;"></div>
+      <button id="switch">電気をつける</button>
+      ```
+      :::
+
+  check-list:
+    説明: "チェックアイコン付きのリスト"
+    使用シーン:
+      - "重要なポイントの列挙"
+      - "確認項目リスト"
+    構文: |
+      - **用途**：画像編集、写真加工、バナー制作
+      - **特徴**：高度な画像編集機能
+      - **価格**：月額制サブスクリプション
+      {.check-list}
+
+  order-list:
+    説明: "「手順」タイトル付きの順序リスト"
+    使用シーン:
+      - "操作手順の説明"
+      - "ステップバイステップガイド"
+      - "プロセスの順序説明"
+    構文: |
+      1. **新規ドキュメント作成**（サイズ：800×200px、RGB、72ppi）
+      2. **背景色の設定**（グラデーションも試してみよう）
+      3. **テキストの追加**（キャッチコピーやタイトル）
+      4. **簡単な図形や画像の配置**
+      {.order-list}
+
+  toc:
+    説明: "目次用のチェックアイコン付きリスト"
+    使用シーン:
+      - "講義内容の概要"
+      - "章立ての紹介"
+    構文: |
+      - 講師自己紹介
+      - アイスブレイク
+      - 講義概要説明
+      - Webとは何か
+      - PCの基本操作
+      - 環境設定
+      {.toc}
+
+  card-box:
+    説明: "カード型のグリッドレイアウト"
+    使用シーン:
+      - "複数の関連項目表示"
+      - "カテゴリー分類"
+    構文: |
+      ::::card-box
+      :::
+      ![w](../assets/images/path/to/image.png) {.text-center}
+      ### タイトル  {.text-center}
+      テキスト {.text-center}
+      :::
+
+      :::
+      ![w](../assets/images/path/to/image.png) {.text-center}
+      ### タイトル  {.text-center}
+      テキスト {.text-center}
+      :::
+
+      :::
+      ![w](../assets/images/path/to/image.png) {.text-center}
+      ### タイトル  {.text-center}
+      テキスト {.text-center}
+      :::
+      ::::
+
+  center-box:
+    説明: "内容を中央揃えにするコンテナ"
+    使用シーン:
+      - "重要な内容の強調"
+      - "シンプルな中央配置"
+    構文: |
+      :::center-box
+      ![w](../assets/images/path/to/image.png)
+      :::
+
+  eyecatch-box:
+    説明: "画像などを目立たせるボックス"
+    使用シーン:
+      - "重要な画像の表示"
+      - "アイコンの強調"
+    構文: |
+      :::eyecatch-box
+      ![w](../assets/images/path/to/image.png)
+      :::

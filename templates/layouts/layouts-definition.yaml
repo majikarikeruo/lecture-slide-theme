@@ -1,0 +1,122 @@
+# templates/layouts/layouts-definition.yaml
+レイアウト:
+  heading-layout:
+    説明: "タイトルスライド用の中央揃えレイアウト"
+    使用シーン:
+      - "講義の冒頭"
+      - "新しいセクションの始まり"
+      - "章の区切り"
+    Marpディレクティブ: "<!-- _class: heading-layout -->"
+    構造: |
+      # タイトル
+
+  content-layout:
+    説明: "通常のコンテンツ表示用レイアウト"
+    使用シーン:
+      - "基本的な説明内容"
+      - "標準的な情報提示"
+    Marpディレクティブ: "<!-- _class: content-layout -->"
+    構造: |
+      ## サブタイトル
+
+      コンテンツ内容（テキスト、リスト等）
+
+  split-layout:
+    説明: "左右に内容を分けるレイアウト（50%/50%）"
+    使用シーン:
+      - "画像とテキストの組み合わせ"
+      - "比較情報の表示"
+      - "コードと説明の並列表示"
+    Marpディレクティブ: "<!-- _class: split-layout -->"
+    構造: |
+      ## サブタイトル
+
+      :::: <!-- 左側コンテンツ -->
+      左側のコンテンツ（画像や説明など）
+      ::::
+
+      :::: <!-- 右側コンテンツ -->
+      右側のコンテンツ
+      ::::
+
+  eyecatch-content-layout:
+    説明: "左側に小さめの画像（28%）、右側に主要コンテンツのレイアウト"
+    使用シーン:
+      - "説明とサポート画像の組み合わせ"
+      - "コンセプト説明とアイコン"
+    Marpディレクティブ: "<!-- _class: eyecatch-content-layout -->"
+    構造: |
+      ## サブタイトル
+
+      :::: <!-- 左側アイキャッチ -->
+      ![w:100%](../assets/images/path/to/image.png)
+      ::::
+
+      :::: <!-- 右側メインコンテンツ -->
+      - 内容1
+      - 内容2
+      ::::
+
+  catchcopy-layout:
+    説明: "キャッチコピーを中央に大きく表示するレイアウト"
+    使用シーン:
+      - "重要なメッセージの強調"
+      - "セクション間のブレイク"
+      - "講義のキーメッセージ"
+    Marpディレクティブ: "<!-- _class: catchcopy-layout -->"
+    構造: |
+      ## サブタイトル
+
+      重要なメッセージやキャッチコピー
+
+  eyecatch-layout:
+    説明: "大きめの画像を中央に配置するレイアウト"
+    使用シーン:
+      - "重要な図解やスクリーンショットの表示"
+      - "ビジュアルイメージの強調"
+    Marpディレクティブ: "<!-- _class: eyecatch-layout -->"
+    構造: |
+      ## サブタイトル
+
+      ![w:80%](../assets/images/path/to/image.png)
+
+  three-column-layout:
+    説明: "コンテンツを3列に分けて表示するレイアウト"
+    使用シーン:
+      - "複数項目の比較"
+      - "ステップバイステップ表示"
+      - "カテゴリー分類の表示"
+    Marpディレクティブ: "<!-- _class: three-column-layout -->"
+    構造: |
+      ## サブタイトル
+
+      ::::card-box
+      :::
+      ![w](../assets/images/path/to/image.png) {.text-center}
+      ### タイトル  {.text-center}
+      テキスト {.text-center}
+      :::
+
+      :::
+      ![w](../assets/images/path/to/image.png) {.text-center}
+      ### タイトル  {.text-center}
+      テキスト {.text-center}
+      :::
+
+      :::
+      ![w](../assets/images/path/to/image.png) {.text-center}
+      ### タイトル  {.text-center}
+      テキスト {.text-center}
+      :::
+      ::::
+
+  centering-layout:
+    説明: "コンテンツを中央に配置するレイアウト"
+    使用シーン:
+      - "シンプルな内容の中央配置"
+      - "重要な図表の強調"
+    Marpディレクティブ: "<!-- _class: centering-layout -->"
+    構造: |
+      ## サブタイトル
+
+      中央に配置したいコンテンツ
